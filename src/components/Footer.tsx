@@ -9,13 +9,23 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-4 mb-8 group">
-              <div className="relative w-20 h-20 transition-transform group-hover:scale-110 drop-shadow-lg">
+              <div className="relative w-14 h-14 transition-transform group-hover:scale-110">
                 <Image 
-                  src="/logo.png" 
-                  alt="BananaMango.bd Logo" 
+                  src="/logo_icon.png" 
+                  alt="BananaMango Logo" 
                   fill 
                   className="object-contain"
                 />
+              </div>
+              <div className="flex flex-col leading-none">
+                <div className="text-2xl font-black flex items-center">
+                  <span className="text-slate-900">Banana</span>
+                  <span className="text-green-600">Mango</span>
+                  <span className="text-gray-400">.bd</span>
+                </div>
+                <span className="text-[9px] font-bold tracking-[0.2em] uppercase text-gray-400">
+                  Premium Fruit Index
+                </span>
               </div>
             </Link>
             <p className="text-gray-600 mb-8 text-lg leading-relaxed">

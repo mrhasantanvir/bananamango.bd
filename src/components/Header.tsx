@@ -33,14 +33,26 @@ const Header = () => {
       }`}
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
-        <Link href="/" className="flex items-center group">
-          <div className="relative w-16 h-16 md:w-20 md:h-20 transition-transform group-hover:scale-110 drop-shadow-xl">
+        <Link href="/" className="flex items-center gap-3 group">
+          <div className="relative w-12 h-12 md:w-14 md:h-14 transition-transform group-hover:scale-110">
             <Image 
-              src="/logo.png" 
-              alt="BananaMango.bd Logo" 
+              src="/logo_icon.png" 
+              alt="BananaMango Logo" 
               fill 
               className="object-contain"
             />
+          </div>
+          <div className="flex flex-col leading-none">
+            <div className="text-2xl md:text-3xl font-black flex items-center">
+              <span className={isScrolled ? "text-slate-900" : "text-white drop-shadow-md"}>Banana</span>
+              <span className="text-green-600">Mango</span>
+              <span className="text-gray-400">.bd</span>
+            </div>
+            <span className={`text-[10px] font-bold tracking-[0.2em] uppercase ${
+              isScrolled ? "text-gray-400" : "text-white/70"
+            }`}>
+              Premium Fruit Index
+            </span>
           </div>
         </Link>
 
