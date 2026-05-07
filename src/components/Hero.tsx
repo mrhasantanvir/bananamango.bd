@@ -20,52 +20,42 @@ const Hero = () => {
       </div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="max-w-3xl">
-          <motion.span
-            initial={{ opacity: 0, x: -20 }}
+        <div className="max-w-4xl">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            className="inline-block bg-primary/20 border border-primary/30 text-primary px-4 py-1 rounded-full text-sm font-bold mb-6 backdrop-blur-sm"
+            transition={{ duration: 0.8 }}
           >
-            রাজশাহীর সেরা ব্যানানা আম
-          </motion.span>
-          
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"
-          >
-            ব্যানানা আম: <span className="text-primary">স্বাদে অনন্য</span>, আকৃতিতে অপূর্ব।
-          </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-lg md:text-xl text-gray-200 mb-10 leading-relaxed max-w-2xl"
-          >
-            রাজশাহীর সেরা বাগানের তাজা ব্যানানা আম এখন আপনার দোরগোড়ায়। এর পাতলা আটি এবং জাদুকরী স্বাদে আপনি মুগ্ধ হতে বাধ্য।
-          </motion.p>
+            <h1 className="text-sm md:text-lg font-black text-primary uppercase tracking-[0.4em] mb-6 drop-shadow-lg">
+              রাজশাহীর প্রিমিয়াম ব্যানানা আম
+            </h1>
+            <h2 className="text-5xl md:text-8xl font-black text-white leading-[1.1] mb-10 drop-shadow-2xl tracking-tighter">
+              স্বাদে ও গন্ধে <br />
+              <span className="text-gradient">অতুলনীয় আভিজাত্য</span>
+            </h2>
+            <p className="text-lg md:text-2xl text-gray-200 mb-12 max-w-2xl leading-relaxed drop-shadow-lg font-medium">
+              সরাসরি রাজশাহীর বাগান থেকে বাছাই করা প্রিমিয়াম ব্যানানা আম। কোনো কেমিক্যাল ছাড়াই প্রাকৃতিকভাবে পাকানো সেরা স্বাদের নিশ্চয়তা।
+            </p>
+          </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="flex flex-col sm:flex-row gap-4"
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="flex flex-col sm:flex-row gap-6"
           >
             <Link
               href="https://rajshahiram.com.bd/ProductDetails/M114"
-              className="bg-primary hover:bg-accent text-dark px-8 py-4 rounded-full font-bold text-lg transition-all flex items-center justify-center gap-2 shadow-2xl hover:scale-105 active:scale-95"
+              className="bg-primary hover:bg-accent text-dark px-10 py-5 rounded-2xl font-black text-xl transition-all flex items-center justify-center gap-3 shadow-[0_20px_50px_rgba(251,191,36,0.3)] hover:scale-105 active:scale-95 group/btn"
             >
               এখনই অর্ডার করুন
-              <ArrowRight size={20} />
+              <ArrowRight className="group-hover:translate-x-2 transition-transform" />
             </Link>
             <Link
               href="#history"
-              className="bg-white/10 hover:bg-white/20 text-white border border-white/30 backdrop-blur-md px-8 py-4 rounded-full font-bold text-lg transition-all text-center"
+              className="bg-white/10 backdrop-blur-md hover:bg-white/20 text-white border border-white/20 px-10 py-5 rounded-2xl font-black text-xl transition-all flex items-center justify-center gap-3 active:scale-95"
             >
-              বিস্তারিত জানুন
+              আরও জানুন
             </Link>
           </motion.div>
         </div>
