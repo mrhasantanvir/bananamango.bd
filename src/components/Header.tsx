@@ -33,27 +33,31 @@ const Header = () => {
       }`}
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-3 group">
-          <div className="relative w-12 h-12 md:w-14 md:h-14 transition-transform group-hover:scale-110">
-            <Image 
-              src="/logo_icon.png" 
-              alt="BananaMango Logo" 
-              fill 
-              className="object-contain"
-            />
-          </div>
-          <div className="flex flex-col leading-none">
-            <div className="text-2xl md:text-3xl font-black flex items-center">
-              <span className={isScrolled ? "text-slate-900" : "text-white drop-shadow-md"}>Banana</span>
-              <span className="text-green-600">Mango</span>
-              <span className="text-gray-400">.bd</span>
-            </div>
-            <span className={`text-[10px] font-bold tracking-[0.2em] uppercase ${
-              isScrolled ? "text-gray-400" : "text-white/70"
-            }`}>
-              Premium Fruit Index
+        <Link href="/" className="flex items-center group">
+          <motion.div 
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            whileHover={{ scale: 1.05 }}
+            className="flex items-center text-xl md:text-2xl font-black tracking-tight"
+          >
+            <span className={isScrolled ? "text-slate-900" : "text-white drop-shadow-md"}>
+              Banana
             </span>
-          </div>
+            <motion.span 
+              animate={{ 
+                color: ["#16a34a", "#ca8a04", "#16a34a"],
+              }}
+              transition={{ 
+                duration: 4, 
+                repeat: Infinity,
+                ease: "linear"
+              }}
+              className="ml-1"
+            >
+              Mango
+            </motion.span>
+            <span className="text-gray-400">.bd</span>
+          </motion.div>
         </Link>
 
         {/* Desktop Nav */}
