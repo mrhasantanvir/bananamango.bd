@@ -6,8 +6,8 @@ import Link from "next/link";
 import { posts } from "@/data/posts";
 
 const Blogs = () => {
-  // Show only the first 6 posts on the home page
-  const displayPosts = posts.slice(0, 6);
+  // Show the latest 6 posts in reverse order
+  const displayPosts = [...posts].reverse().slice(0, 6);
 
   return (
     <section id="blogs" className="py-32 bg-gray-50 relative overflow-hidden">
