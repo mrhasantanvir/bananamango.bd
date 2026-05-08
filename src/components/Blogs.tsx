@@ -31,45 +31,48 @@ const Blogs = () => {
           {displayPosts.map((post, index) => (
             <motion.article
               key={post.slug}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="group bg-white rounded-[2.5rem] overflow-hidden shadow-2xl hover:shadow-primary/20 border border-gray-100 transition-all transform hover:-translate-y-3 flex flex-col h-full"
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="group bg-white rounded-[2.5rem] overflow-hidden shadow-xl hover:shadow-[0_40px_80px_-20px_rgba(251,191,36,0.3)] border border-gray-100 transition-all duration-500 transform hover:-translate-y-3 flex flex-col h-full relative"
             >
-              <div className="p-8 flex-grow flex flex-col">
-                <div className="flex flex-wrap gap-2 mb-6">
+              {/* Top Accent Line */}
+              <div className="absolute top-0 left-0 w-0 h-1.5 bg-primary group-hover:w-full transition-all duration-700" />
+              
+              <div className="p-10 flex-grow flex flex-col">
+                <div className="flex flex-wrap gap-2 mb-8">
                   {post.keywords.slice(0, 2).map((tag) => (
-                    <span key={tag} className="bg-gray-100 text-gray-500 px-4 py-1.5 rounded-xl text-[10px] font-black uppercase tracking-widest">
+                    <span key={tag} className="bg-gray-50 text-gray-400 group-hover:bg-primary/10 group-hover:text-primary px-4 py-2 rounded-xl text-[10px] font-black uppercase tracking-widest transition-colors">
                       {tag}
                     </span>
                   ))}
                 </div>
                 
-                <h4 className="text-2xl font-black mb-6 group-hover:text-primary transition-colors line-clamp-2 tracking-tight">
+                <h4 className="text-2xl font-black mb-6 group-hover:text-primary transition-colors line-clamp-2 tracking-tighter leading-tight">
                   <Link href={`/blog/${post.slug}`}>{post.title}</Link>
                 </h4>
                 
-                <p className="text-gray-500 mb-10 flex-grow leading-relaxed font-medium text-lg line-clamp-3">
+                <p className="text-gray-500 mb-10 flex-grow leading-relaxed font-medium text-lg line-clamp-3 group-hover:text-gray-600 transition-colors">
                   {post.excerpt}
                 </p>
 
-                <div className="flex items-center justify-between pt-8 border-t border-gray-50 mt-auto">
-                  <div className="flex items-center gap-6 text-xs font-bold text-gray-400 uppercase tracking-widest">
-                    <div className="flex items-center gap-2">
-                      <Calendar size={14} className="text-primary" />
+                <div className="flex items-center justify-between pt-8 border-t border-gray-100 mt-auto">
+                  <div className="flex flex-col gap-2">
+                    <div className="flex items-center gap-3 text-[10px] font-black text-gray-400 uppercase tracking-widest">
+                      <Calendar size={14} className="text-primary/60 group-hover:text-primary transition-colors" />
                       <span>{post.date}</span>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <User size={14} className="text-primary" />
+                    <div className="flex items-center gap-3 text-[10px] font-black text-gray-400 uppercase tracking-widest">
+                      <User size={14} className="text-primary/60 group-hover:text-primary transition-colors" />
                       <span>{post.author}</span>
                     </div>
                   </div>
                   <Link 
                     href={`/blog/${post.slug}`}
-                    className="w-12 h-12 bg-gray-50 rounded-2xl flex items-center justify-center text-gray-400 group-hover:bg-primary group-hover:text-dark transition-all shadow-sm"
+                    className="w-14 h-14 bg-gray-50 rounded-2xl flex items-center justify-center text-gray-400 group-hover:bg-primary group-hover:text-dark transition-all shadow-sm group-hover:shadow-lg active:scale-90"
                   >
-                    <ArrowUpRight size={24} />
+                    <ArrowUpRight size={28} />
                   </Link>
                 </div>
               </div>

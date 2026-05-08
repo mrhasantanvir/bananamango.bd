@@ -61,10 +61,17 @@ const About = () => {
                 { label: "মিষ্টি স্বাদ", value: "৯৯%", color: "text-secondary" },
                 { label: "কোয়ালিটি", value: "প্রিমিয়াম", color: "text-dark" }
               ].map((stat, i) => (
-                <div key={i} className="bg-white p-6 rounded-3xl border border-gray-100 shadow-xl shadow-gray-100/50 hover:-translate-y-1 transition-transform">
+                <motion.div 
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.1 * i }}
+                  className="bg-white p-6 rounded-3xl border border-gray-100 shadow-xl shadow-gray-100/50 hover:shadow-2xl hover:shadow-primary/10 transition-all cursor-default"
+                >
                   <span className={`block text-2xl md:text-3xl font-black ${stat.color} mb-1`}>{stat.value}</span>
                   <span className="text-[10px] text-gray-400 uppercase font-black tracking-widest">{stat.label}</span>
-                </div>
+                </motion.div>
               ))}
             </div>
           </motion.div>
