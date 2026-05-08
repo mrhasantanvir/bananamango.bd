@@ -103,23 +103,23 @@ const Header = () => {
             exit={{ opacity: 0, y: -20 }}
             className="absolute top-full left-0 right-0 glass border-t border-white/10 md:hidden"
           >
-            <nav className="flex flex-col p-6 gap-4">
+            <nav className="flex flex-col p-8 gap-6">
               {navLinks.map((link) => (
                 <Link
                   key={link.name}
                   href={link.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="text-lg font-medium"
+                  className="text-2xl font-black text-slate-800 border-b border-gray-100 pb-4 hover:text-primary transition-colors"
                 >
                   {link.name}
                 </Link>
               ))}
               <Link
                 href="https://rajshahiram.com.bd/ProductDetails/M114"
-                className="bg-accent text-white p-4 rounded-xl font-black text-center flex items-center justify-center gap-2 shadow-lg"
+                className="bg-primary text-dark p-6 rounded-2xl font-black text-center flex items-center justify-center gap-3 shadow-xl text-xl mt-4"
               >
-                <ShoppingCart size={20} />
-                রাজশাহীর আম কিনুন
+                <ShoppingCart size={24} />
+                অর্ডার করুন
               </Link>
             </nav>
           </motion.div>
