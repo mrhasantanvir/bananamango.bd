@@ -62,7 +62,8 @@ const Hero = () => {
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className="text-gradient block mt-4 md:mt-6"
               >
-                অতুলনীয় আভিজাত্য
+                <span className="block pb-3 md:pb-5">অতুলনীয়</span>
+                <span className="block pt-1 md:pt-2">আভিজাত্য</span>
               </motion.span>
             </h1>
             
