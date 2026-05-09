@@ -2,7 +2,7 @@ import { posts } from "@/data/posts";
 import { notFound } from "next/navigation";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Calendar, User, ArrowLeft, Share2, Globe, Mail, Link as LinkIcon } from "lucide-react";
+import { Calendar, User, ArrowLeft, Share2, Globe, Mail, Link as LinkIcon, Smartphone, MessageCircle } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
@@ -119,6 +119,42 @@ export default async function BlogPost({ params }: Props) {
 
                 <div className="bg-primary/10 border-l-4 border-primary p-8 rounded-2xl my-12 italic text-dark font-medium">
                   "রাজশাহীর ব্যানানা আম এখন আমের বাজারে আভিজাত্যের প্রতীক। এর পাতলা আঁটি এবং সুমিষ্ট স্বাদ আপনাকে মুগ্ধ করবেই।"
+                </div>
+
+                <div className="mt-16 border-t border-gray-100 pt-12">
+                  <h3 className="text-2xl font-bold text-dark mb-8 flex items-center gap-2">
+                    <span className="w-8 h-1 bg-primary rounded-full" />
+                    প্রয়োজনীয় লিঙ্ক ও যোগাযোগ
+                  </h3>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <Link href="https://rajshahiram.com.bd" target="_blank" className="flex items-center gap-4 p-6 bg-gray-50 rounded-2xl border border-gray-100 hover:border-primary hover:shadow-lg transition-all group">
+                      <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-sm group-hover:bg-primary group-hover:text-white transition-colors flex-shrink-0">
+                        <Globe size={24} className="text-primary group-hover:text-white" />
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-dark text-sm">অফিসিয়াল ওয়েবসাইট</h4>
+                        <p className="text-xs text-gray-400">rajshahiram.com.bd</p>
+                      </div>
+                    </Link>
+                    <Link href="https://play.google.com/store/apps/details?id=com.rabbil.rajshahimango&hl=en-US&pli=1" target="_blank" className="flex items-center gap-4 p-6 bg-gray-50 rounded-2xl border border-gray-100 hover:border-primary hover:shadow-lg transition-all group">
+                      <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-sm group-hover:bg-primary group-hover:text-white transition-colors flex-shrink-0">
+                        <Smartphone size={24} className="text-primary group-hover:text-white" />
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-dark text-sm">মোবাইল অ্যাপ</h4>
+                        <p className="text-xs text-gray-400">Google Play Store</p>
+                      </div>
+                    </Link>
+                    <Link href="https://wa.me/8801707979767" target="_blank" className="flex items-center gap-4 p-6 bg-gray-50 rounded-2xl border border-gray-100 hover:border-primary hover:shadow-lg transition-all group">
+                      <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-sm group-hover:bg-green-500 group-hover:text-white transition-colors flex-shrink-0">
+                        <MessageCircle size={24} className="text-green-500 group-hover:text-white" />
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-dark text-sm">হোয়াটসঅ্যাপ</h4>
+                        <p className="text-xs text-gray-400">+8801707979767</p>
+                      </div>
+                    </Link>
+                  </div>
                 </div>
               </div>
 
