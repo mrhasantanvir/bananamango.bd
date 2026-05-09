@@ -78,11 +78,12 @@ const Footer = () => {
             </h4>
             <ul className="grid grid-cols-1 gap-3">
               {[
-                { name: "হোম", href: "#" },
-                { name: "পরিচিতি", href: "#history" },
-                { name: "চাষ পদ্ধতি", href: "#care" },
-                { name: "রেসিপি", href: "#recipe" },
-                { name: "ব্লগ", href: "#blogs" }
+                { name: "হোম", href: "/" },
+                { name: "পরিচিতি", href: "/about" },
+                { name: "চাষ পদ্ধতি", href: "/#care" },
+                { name: "রেসিপি", href: "/#recipe" },
+                { name: "ব্লগ", href: "/blog" },
+                { name: "যোগাযোগ", href: "/contact" }
               ].map((item) => (
                 <li key={item.name}>
                   <Link href={item.href} className="text-gray-500 hover:text-primary transition-all font-bold flex items-center gap-2 group/link text-sm">

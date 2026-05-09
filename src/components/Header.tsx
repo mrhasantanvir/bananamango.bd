@@ -19,11 +19,12 @@ const Header = () => {
   }, []);
 
   const navLinks = [
-    { name: "হোম", href: "#" },
-    { name: "পরিচিতি", href: "#history" },
-    { name: "চাষ পদ্ধতি", href: "#care" },
-    { name: "রেসিপি", href: "#recipe" },
-    { name: "ব্লগ", href: "#blogs" },
+    { name: "হোম", href: "/" },
+    { name: "পরিচিতি", href: "/about" },
+    { name: "চাষ পদ্ধতি", href: "/#care" },
+    { name: "রেসিপি", href: "/#recipe" },
+    { name: "ব্লগ", href: "/blog" },
+    { name: "যোগাযোগ", href: "/contact" },
   ];
 
   return (
