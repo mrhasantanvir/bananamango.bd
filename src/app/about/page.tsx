@@ -46,7 +46,7 @@ const AboutPage = () => {
             <div className="relative">
               <div className="relative rounded-[3rem] overflow-hidden shadow-2xl">
                 <Image 
-                  src="/mango_tree_garden_1778306757086.png" 
+                  src="/blog-images/img1.png" 
                   alt="Our Orchard" 
                   width={800} 
                   height={600} 
