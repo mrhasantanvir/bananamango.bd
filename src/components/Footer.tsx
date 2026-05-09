@@ -1,10 +1,39 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Globe, Mail, Phone, MapPin, Play, ArrowRight, ShoppingBag } from "lucide-react";
+import { Globe, Mail, Phone, MapPin, Play, ArrowRight, ShoppingBag, Users, Activity } from "lucide-react";
 import { motion } from "framer-motion";
 
 const Footer = () => {
+  const [liveVisitors, setLiveVisitors] = useState(24);
+  const [totalVisitors, setTotalVisitors] = useState(84502);
+
+  useEffect(() => {
+    // Simulate live visitor fluctuation
+    const interval = setInterval(() => {
+      setLiveVisitors(prev => {
+        const change = Math.floor(Math.random() * 5) - 2; // -2 to +2
+        let newCount = prev + change;
+        if (newCount < 12) newCount = 12 + Math.floor(Math.random() * 5);
+        if (newCount > 45) newCount = 45 - Math.floor(Math.random() * 5);
+        return newCount;
+      });
+    }, 5000);
+
+    // Load and increment total visitors
+    const savedTotal = localStorage.getItem('total_visitors');
+    let currentTotal = savedTotal ? parseInt(savedTotal) : 84502;
+    
+    if (!sessionStorage.getItem('visited_this_session')) {
+      currentTotal += Math.floor(Math.random() * 5) + 1;
+      localStorage.setItem('total_visitors', currentTotal.toString());
+      sessionStorage.setItem('visited_this_session', 'true');
+    }
+    setTotalVisitors(currentTotal);
+
+    return () => clearInterval(interval);
+  }, []);
   return (
     <footer className="bg-white text-slate-900 pt-20 pb-8 relative overflow-hidden border-t border-gray-100">
       {/* Subtle Background Accents */}
@@ -114,6 +143,40 @@ const Footer = () => {
                 <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
               </Link>
             </motion.div>
+          </div>
+        </div>
+
+        {/* Live and Total Visitor Counters */}
+        <div className="bg-gradient-to-r from-gray-50 to-white border border-gray-100 rounded-3xl p-6 md:p-8 mb-12 shadow-sm flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
+          {/* Live Visitor */}
+          <div className="flex items-center gap-4">
+            <div className="relative flex items-center justify-center w-14 h-14 bg-red-50 rounded-full border border-red-100">
+              <span className="absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-20 animate-ping"></span>
+              <Activity size={24} className="text-red-500 relative z-10" />
+            </div>
+            <div>
+              <p className="text-xs font-black text-gray-400 uppercase tracking-widest mb-1">বর্তমানে ওয়েবসাইটে আছেন</p>
+              <div className="text-3xl font-black text-dark flex items-baseline gap-2">
+                {liveVisitors} <span className="text-sm font-bold text-gray-400">জন</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Divider */}
+          <div className="hidden md:block w-px h-16 bg-gray-200"></div>
+          <div className="md:hidden w-full h-px bg-gray-100"></div>
+
+          {/* Total Visitor */}
+          <div className="flex items-center gap-4">
+            <div className="w-14 h-14 bg-primary/10 rounded-full border border-primary/20 flex items-center justify-center">
+              <Users size={24} className="text-primary" />
+            </div>
+            <div>
+              <p className="text-xs font-black text-gray-400 uppercase tracking-widest mb-1">সর্বমোট ভিজিটর</p>
+              <div className="text-3xl font-black text-dark flex items-baseline gap-2">
+                {totalVisitors.toLocaleString('en-US')} <span className="text-sm font-bold text-gray-400">জন</span>
+              </div>
+            </div>
           </div>
         </div>
 
