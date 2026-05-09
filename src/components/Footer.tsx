@@ -147,41 +147,41 @@ const Footer = () => {
         </div>
 
         {/* Live and Total Visitor Counters */}
-        <div className="bg-gradient-to-r from-gray-50 to-white border border-gray-100 rounded-3xl p-6 md:p-8 mb-12 shadow-sm flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
+        <div className="bg-white border border-gray-100 rounded-2xl p-4 md:p-6 mb-12 shadow-sm flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 max-w-4xl mx-auto">
           {/* Live Visitor */}
-          <div className="flex items-center gap-4">
-            <div className="relative flex items-center justify-center w-14 h-14 bg-red-50 rounded-full border border-red-100">
+          <div className="flex items-center gap-3">
+            <div className="relative flex items-center justify-center w-10 h-10 bg-red-50 rounded-full border border-red-100">
               <span className="absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-20 animate-ping"></span>
-              <Activity size={24} className="text-red-500 relative z-10" />
+              <Activity size={18} className="text-red-500 relative z-10" />
             </div>
             <div>
-              <p className="text-xs font-black text-gray-400 uppercase tracking-widest mb-1">বর্তমানে ওয়েবসাইটে আছেন</p>
-              <div className="text-3xl font-black text-dark flex items-baseline gap-2">
-                {liveVisitors} <span className="text-sm font-bold text-gray-400">জন</span>
+              <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-0.5">বর্তমানে অনলাইনে আছেন</p>
+              <div className="text-xl font-black text-dark flex items-baseline gap-1">
+                {liveVisitors} <span className="text-[10px] font-bold text-gray-400">জন</span>
               </div>
             </div>
           </div>
 
           {/* Divider */}
-          <div className="hidden md:block w-px h-16 bg-gray-200"></div>
+          <div className="hidden md:block w-px h-10 bg-gray-100"></div>
           <div className="md:hidden w-full h-px bg-gray-100"></div>
 
           {/* Total Visitor */}
-          <div className="flex items-center gap-4">
-            <div className="w-14 h-14 bg-primary/10 rounded-full border border-primary/20 flex items-center justify-center">
-              <Users size={24} className="text-primary" />
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 bg-primary/10 rounded-full border border-primary/20 flex items-center justify-center">
+              <Users size={18} className="text-primary" />
             </div>
             <div>
-              <p className="text-xs font-black text-gray-400 uppercase tracking-widest mb-1">সর্বমোট ভিজিটর</p>
-              <div className="text-3xl font-black text-dark flex items-baseline gap-2">
-                {totalVisitors.toLocaleString('en-US')} <span className="text-sm font-bold text-gray-400">জন</span>
+              <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-0.5">সর্বমোট ভিজিটর</p>
+              <div className="text-xl font-black text-dark flex items-baseline gap-1">
+                {totalVisitors.toLocaleString('en-US')} <span className="text-[10px] font-bold text-gray-400">জন</span>
               </div>
             </div>
           </div>
         </div>
 
         <div className="pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-6 text-gray-400 text-[10px] font-black tracking-widest uppercase">
-          <p>© 2024 BananaMango.bd | All Rights Reserved</p>
+          <p>© 2026 BananaMango.bd | All Rights Reserved</p>
           <div className="flex items-center gap-4">
             <span className="flex items-center gap-2">
               Powered by 
