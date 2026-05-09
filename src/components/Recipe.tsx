@@ -18,7 +18,7 @@ const Recipe = () => {
     <section id="recipe" className="py-24 bg-white overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col lg:flex-row-reverse items-center gap-16">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -26,11 +26,11 @@ const Recipe = () => {
             className="lg:w-1/2 relative"
           >
             <div className="relative z-10 rounded-[3rem] overflow-hidden shadow-2xl">
-              <Image 
-                src="/recipe.png" 
-                alt="ব্যানানা আমের আচার" 
-                width={800} 
-                height={1000} 
+              <Image
+                src="/recipe.png"
+                alt="ব্যানানা আমের আচার"
+                width={800}
+                height={1000}
                 className="w-full h-auto"
               />
             </div>
@@ -40,7 +40,7 @@ const Recipe = () => {
             </div>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -51,7 +51,7 @@ const Recipe = () => {
             <h3 className="text-4xl md:text-5xl font-bold mb-8 leading-tight">
               ব্যানানা আমের <span className="text-gradient">টক-মিষ্টি ঝুরি আচার</span>
             </h3>
-            
+
             <div className="flex gap-6 mb-10">
               <div className="flex items-center gap-2 text-gray-500">
                 <Clock size={20} className="text-primary" />

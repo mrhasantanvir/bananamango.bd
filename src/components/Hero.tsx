@@ -47,12 +47,12 @@ const Hero = () => {
               </span>
             </div>
             
-            <h1 className="text-5xl md:text-9xl font-black text-white leading-[0.9] mb-10 tracking-tighter">
+            <h1 className="text-5xl md:text-8xl lg:text-9xl font-black text-white leading-[1.2] md:leading-[1.1] mb-10 tracking-tighter">
               <motion.span 
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="block"
+                className="block pb-2 md:pb-4"
               >
                 স্বাদে ও গন্ধে
               </motion.span>
@@ -60,7 +60,7 @@ const Hero = () => {
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className="text-gradient block mt-2"
+                className="text-gradient block mt-4 md:mt-6"
               >
                 অতুলনীয় আভিজাত্য
               </motion.span>
