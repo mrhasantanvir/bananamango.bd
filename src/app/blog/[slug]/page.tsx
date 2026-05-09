@@ -2,7 +2,7 @@ import { posts } from "@/data/posts";
 import { notFound } from "next/navigation";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Calendar, User, ArrowLeft, Share2, Globe, Mail, Link as LinkIcon, Smartphone, MessageCircle } from "lucide-react";
+import { Calendar, User, ArrowLeft, ArrowRight, Share2, Globe, Mail, Link as LinkIcon, Smartphone, MessageCircle } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
@@ -37,7 +37,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function BlogPost({ params }: Props) {
   const { slug } = await params;
-  const post = posts.find((p) => p.slug === slug);
+  const currentIndex = posts.findIndex((p) => p.slug === slug);
+  const post = posts[currentIndex];
+  const prevPost = currentIndex > 0 ? posts[currentIndex - 1] : null;
+  const nextPost = currentIndex < posts.length - 1 ? posts[currentIndex + 1] : null;
 
   if (!post) {
     notFound();
@@ -155,6 +158,26 @@ export default async function BlogPost({ params }: Props) {
                       </div>
                     </Link>
                   </div>
+                </div>
+
+                {/* Post Navigation */}
+                <div className="mt-16 pt-12 border-t border-gray-100 flex flex-col md:flex-row gap-6">
+                  {prevPost && (
+                    <Link href={`/blog/${prevPost.slug}`} className="flex-1 p-8 bg-gray-50 rounded-3xl border border-gray-100 hover:border-primary hover:bg-white hover:shadow-xl transition-all group">
+                      <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-3 flex items-center gap-2">
+                        <ArrowLeft size={12} className="group-hover:-translate-x-1 transition-transform" /> আগের ব্লগ
+                      </p>
+                      <h4 className="font-bold text-dark group-hover:text-primary transition-colors line-clamp-2 leading-snug">{prevPost.title}</h4>
+                    </Link>
+                  )}
+                  {nextPost && (
+                    <Link href={`/blog/${nextPost.slug}`} className="flex-1 p-8 bg-gray-50 rounded-3xl border border-gray-100 hover:border-primary hover:bg-white hover:shadow-xl transition-all group text-right">
+                      <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-3 flex items-center gap-2 justify-end">
+                        পরের ব্লগ <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
+                      </p>
+                      <h4 className="font-bold text-dark group-hover:text-primary transition-colors line-clamp-2 leading-snug">{nextPost.title}</h4>
+                    </Link>
+                  )}
                 </div>
               </div>
 
