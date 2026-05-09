@@ -6,6 +6,7 @@ export interface Post {
   date: string;
   author: string;
   keywords: string[];
+  image: string;
 }
 
 export const posts: Post[] = [
@@ -29,6 +30,7 @@ export const posts: Post[] = [
     date: "মে ০৯, ২০২৪",
     author: "অ্যাডমিন",
     keywords: ["Banana Mango price in Bangladesh", "ব্যানানা আমের বৈশিষ্ট্য", "রাজশাহীর আম"],
+    image: "/blog-images/img1.png",
   },
   {
     title: "বাণিজ্যিক ভাবে ব্যানানা আম চাষের লাভ-ক্ষতি ও সঠিক পরিকল্পনা",
@@ -52,6 +54,7 @@ export const posts: Post[] = [
     date: "মে ০৯, ২০২৪",
     author: "কৃষি বিশেষজ্ঞ",
     keywords: ["ব্যানানা আম চাষ পদ্ধতি", "আমের চারা রোপণ", "রাজশাহীর বাগান"],
+    image: "/blog-images/img2.png",
   },
   {
     title: "কিভাবে চিনবেন আসল ব্যানানা আম? আম চেনার ১০টি গোপন টিপস।",
@@ -71,6 +74,7 @@ export const posts: Post[] = [
     date: "মে ০৯, ২০২৪",
     author: "আম প্রেমী",
     keywords: ["Original Banana Mango", "আম চেনার উপায়", "রাজশাহীর সেরা আম"],
+    image: "/blog-images/img3.png",
   },
   {
     title: "ব্যানানা আমের চারা রোপণের সঠিক নিয়ম, মাটি ও সময়।",
@@ -91,6 +95,7 @@ export const posts: Post[] = [
     date: "মে ০৯, ২০২৪",
     author: "কৃষি বিশেষজ্ঞ",
     keywords: ["Banana Mango plant price", "আমের চারা রোপণ পদ্ধতি", "রাজশাহীর চারা"],
+    image: "/blog-images/img4.png",
   },
   {
     title: "ব্যানানা আম কেন বাংলাদেশের বাজারে এত দামী? (Price Analysis)",
@@ -108,6 +113,7 @@ export const posts: Post[] = [
     date: "মে ০৯, ২০২৪",
     author: "বাজার বিশ্লেষক",
     keywords: ["Banana Mango price", "আমের বাজার দর", "রাজশাহীর আমের দাম"],
+    image: "/blog-images/img5.png",
   },
   {
     title: "ব্যানানা আমের অসামান্য পুষ্টিগুণ এবং দীর্ঘমেয়াদী স্বাস্থ্য উপকারিতা।",
@@ -126,6 +132,7 @@ export const posts: Post[] = [
     date: "মে ০৯, ২০২৪",
     author: "পুষ্টিবিদ",
     keywords: ["Banana mango calories", "ব্যানানা আমের উপকারিতা", "স্বাস্থ্যকর ফল"],
+    image: "/blog-images/img6.png",
   },
   {
     title: "টবে ব্যানানা আম চাষ করার সহজ ও পূর্ণাঙ্গ পদ্ধতি।",
@@ -148,6 +155,7 @@ export const posts: Post[] = [
     date: "মে ০৯, ২০২৪",
     author: "ছাদ কৃষি",
     keywords: ["Rooftop farming", "টবে আম চাষ", "ব্যানানা আমের চারা"],
+    image: "/blog-images/img7.png",
   },
   {
     title: "ব্যানানা আমের টক-মিষ্টি ঝুরি আচার রেসিপি ও সংরক্ষণ পদ্ধতি।",
@@ -170,6 +178,7 @@ export const posts: Post[] = [
     date: "মে ০৯, ২০২৪",
     author: "রাঁধুনি",
     keywords: ["Banana mango chutney", "আমের আচার রেসিপি", "আচার তৈরি"],
+    image: "/blog-images/img8.png",
   },
   {
     title: "ব্যানানা আম চাষের জন্য আদর্শ মাটি নির্বাচন ও জমি প্রস্তুতির নিয়ম।",
@@ -187,6 +196,7 @@ export const posts: Post[] = [
     date: "মে ০৯, ২০২৪",
     author: "কৃষি তথ্য",
     keywords: ["Soil for mango", "আম চাষের মাটি", "রাজশাহীর মাটি"],
+    image: "/blog-images/img9.png",
   },
   {
     title: "ব্যানানা আমের মুকুল আসার পর বিশেষ যত্ন ও ঝরা রোধের উপায়।",
@@ -204,6 +214,7 @@ export const posts: Post[] = [
     date: "মে ০৯, ২০২৪",
     author: "কৃষি বিশেষজ্ঞ",
     keywords: ["Mango flowering care", "মুকুল ঝরা রোধ", "আমের যত্ন"],
+    image: "/blog-images/img10.png",
   },
   {
     title: "ব্যানানা আম এবং আম্রপালির মধ্যে প্রধান পার্থক্য ও স্বাদের তুলনা।",
@@ -221,6 +232,7 @@ export const posts: Post[] = [
     date: "মে ০৯, ২০২৪",
     author: "আম বিশেষজ্ঞ",
     keywords: ["Mango variety comparison", "ব্যানানা বনাম আম্রপালি", "সেরা আমের জাত"],
+    image: "/blog-images/img1.png",
   },
   {
     title: "কিভাবে ঘরে ব্যানানা আম দ্রুত ও প্রাকৃতিকভাবে পাকাবেন? (Natural Ripening)",
@@ -238,6 +250,7 @@ export const posts: Post[] = [
     date: "মে ০৯, ২০২৪",
     author: "গৃহিণী",
     keywords: ["Ripening mango at home", "আম পাকানোর উপায়", "প্রাকৃতিক আম"],
+    image: "/blog-images/img2.png",
   },
   {
     title: "ব্যানানা আম সংরক্ষণের সেরা ৩টি বৈজ্ঞানিক পদ্ধতি।",
@@ -254,6 +267,7 @@ export const posts: Post[] = [
     date: "মে ০৯, ২০২৪",
     author: "ফুড টেকনোলজিস্ট",
     keywords: ["Store mango long time", "আম সংরক্ষণ পদ্ধতি", "ফ্রিজে আম রাখা"],
+    image: "/blog-images/img3.png",
   },
   {
     title: "ব্যানানা আম চাষে জৈব সারের অবিশ্বাস্য গুরুত্ব ও সুফল।",
@@ -271,6 +285,7 @@ export const posts: Post[] = [
     date: "মে ০৯, ২০২৪",
     author: "কৃষি বিজ্ঞানী",
     keywords: ["Organic farming", "জৈব সার প্রয়োগ", "আমের ফলন বৃদ্ধি"],
+    image: "/blog-images/img4.png",
   },
   {
     title: "অনলাইনে আসল রাজশাহীর ব্যানানা আম কেনার পূর্ণাঙ্গ গাইড।",
@@ -288,6 +303,7 @@ export const posts: Post[] = [
     date: "মে ০৯, ২০২৪",
     author: "অ্যাডমিন",
     keywords: ["Buy mango online Bangladesh", "অনলাইনে আম কেনা", "রাজশাহীর আম"],
+    image: "/blog-images/img5.png",
   },
   {
     title: "ব্যানানা আমের ১০টি জাদুকরী স্বাস্থ্য উপকারিতা যা আপনাকে অবাক করবে।",
@@ -308,6 +324,7 @@ export const posts: Post[] = [
     date: "মে ০৯, ২০২৪",
     author: "পুষ্টিবিদ",
     keywords: ["Health benefits of mango", "আমের স্বাস্থ্য উপকারিতা", "পুষ্টিকর ফল"],
+    image: "/blog-images/img6.png",
   },
   {
     title: "ব্যানানা আম চাষে পোকা দমনের প্রাকৃতিক ও জৈব প্রতিকার পদ্ধতি।",
@@ -326,6 +343,7 @@ export const posts: Post[] = [
     date: "মে ০৯, ২০২৪",
     author: "কৃষি তথ্য",
     keywords: ["Natural pest control", "জৈব বালাইনাশক", "আমের পোকা দমন"],
+    image: "/blog-images/img7.png",
   },
   {
     title: "রাজশাহীর সেরা ব্যানানা আম বাগান ভ্রমণের অভিজ্ঞতা ও পর্যটন গাইড।",
@@ -344,6 +362,7 @@ export const posts: Post[] = [
     date: "মে ০৯, ২০২৪",
     author: "ভ্রমণ পিপাসু",
     keywords: ["Rajshahi tourism", "আম বাগান ভ্রমণ", "রাজশাহীর বাগান"],
+    image: "/blog-images/img8.png",
   },
   {
     title: "ব্যানানা আমের সিজন কতদিন থাকে? আম সংগ্রহের সঠিক সময়কাল।",
@@ -362,6 +381,7 @@ export const posts: Post[] = [
     date: "মে ০৯, ২০২৪",
     author: "কৃষি বিশেষজ্ঞ",
     keywords: ["Mango season Bangladesh", "আম সংগ্রহের সময়", "ব্যানানা আমের বাজার"],
+    image: "/blog-images/img9.png",
   },
   {
     title: "ব্যানানা আম কেন বাংলাদেশের 'রয়্যাল ফ্রুট' বা রাজকীয় ফল?",
@@ -379,6 +399,7 @@ export const posts: Post[] = [
     date: "মে ০৯, ২০২৪",
     author: "অ্যাডমিন",
     keywords: ["Premium mango Bangladesh", "রাজকীয় ফল", "ব্যানানা আমের আভিজাত্য"],
+    image: "/blog-images/img10.png",
   },
   {
     title: "ব্যানানা আম চাষে আধুনিক ফ্রুট ব্যাগিং পদ্ধতি ও এর সুবিধা।",
@@ -399,6 +420,7 @@ export const posts: Post[] = [
     date: "মে ০৯, ২০২৪",
     author: "কৃষি তথ্য",
     keywords: ["Fruit bagging technology", "বিষমুক্ত আম", "আধুনিক আম চাষ"],
+    image: "/blog-images/img1.png",
   },
   {
     title: "আমের ফলন বাড়াতে ড্রিপ ইরিগেশন বা আধুনিক সেচ প্রযুক্তির ব্যবহার।",
@@ -419,6 +441,7 @@ export const posts: Post[] = [
     date: "মে ০৯, ২০২৪",
     author: "সেচ ইঞ্জিনিয়ার",
     keywords: ["Modern irrigation", "আমের সেচ পদ্ধতি", "কৃষি প্রযুক্তি"],
+    image: "/blog-images/img2.png",
   },
   {
     title: "বিদেশে আম রপ্তানির নিয়মাবলী ও সরকারি গাইডলাইন ২০২৪।",
@@ -436,6 +459,7 @@ export const posts: Post[] = [
     date: "মে ০৯, ২০২৪",
     author: "রপ্তানি বিশেষজ্ঞ",
     keywords: ["Mango export process", "আম রপ্তানি", "বৈদেশিক মুদ্রা"],
+    image: "/blog-images/img3.png",
   },
   {
     title: "ব্যানানা আম প্রসেসিং ও ভ্যালু অ্যাডেড পণ্য তৈরির সম্ভাবনা।",
@@ -453,6 +477,7 @@ export const posts: Post[] = [
     date: "মে ০৯, ২০২৪",
     author: "শিল্প উদ্যোক্তা",
     keywords: ["Mango processing", "আমের তৈরি খাদ্য", "উদ্যোক্তা গাইড"],
+    image: "/blog-images/img4.png",
   },
   {
     title: "আম বাগানে সাথী ফসল চাষের সুবিধা ও আধুনিক মডেল।",
@@ -470,6 +495,7 @@ export const posts: Post[] = [
     date: "মে ০৯, ২০২৪",
     author: "কৃষি তথ্য",
     keywords: ["Intercropping guide", "সাথী ফসল চাষ", "লাভজনক বাগান"],
+    image: "/blog-images/img5.png",
   },
   {
     title: "ব্যানানা আম চাষে পটাশ সারের ভূমিকা ও প্রয়োগ পদ্ধতি।",
@@ -486,6 +512,7 @@ export const posts: Post[] = [
     date: "মে ০৯, ২০২৪",
     author: "মৃত্তিকা বিজ্ঞানী",
     keywords: ["Mango fertilizer guide", "পটাশ সারের সুফল", "মিষ্টি আম চাষ"],
+    image: "/blog-images/img6.png",
   },
   {
     title: "আধুনিক পদ্ধতিতে আম বাগান এলাকা নির্বাচন ও নকশা তৈরি।",
@@ -503,6 +530,7 @@ export const posts: Post[] = [
     date: "মে ০৯, ২০২৪",
     author: "বাগান পরিকল্পনাকারী",
     keywords: ["Orchard layout design", "আম বাগান নকশা", "রাজশাহীর বাগান"],
+    image: "/blog-images/img7.png",
   },
   {
     title: "আমের হপার পোকা দমনের আধুনিক ও জৈব পদ্ধতি।",
@@ -520,6 +548,7 @@ export const posts: Post[] = [
     date: "মে ০৯, ২০২৪",
     author: "কীটতত্ত্ববিদ",
     keywords: ["Mango hopper control", "আমের পোকা দমন", "প্রাকৃতিক প্রতিকার"],
+    image: "/blog-images/img8.png",
   },
   {
     title: "ব্যানানা আম চাষে হরমোন প্রয়োগের সঠিক নিয়ম ও সময়কাল",
@@ -540,6 +569,7 @@ export const posts: Post[] = [
     date: "মে ০৯, ২০২৪",
     author: "কৃষি বৈজ্ঞানিক",
     keywords: ["Mango growth regulator", "আমের হরমোন প্রয়োগ", "ফলন বৃদ্ধি"],
+    image: "/blog-images/img9.png",
   },
   {
     title: "ব্যানানা আম বনাম কাটিমন আম: বাণিজ্যিক চাষে কোনটি সেরা?",
@@ -558,6 +588,7 @@ export const posts: Post[] = [
     date: "মে ০৯, ২০২৪",
     author: "বাজার বিশ্লেষক",
     keywords: ["Mango variety comparison", "কাটিমন বনাম ব্যানানা আম", "লাভজনক কৃষি"],
+    image: "/blog-images/img10.png",
   },
   {
     title: "ব্যানানা আম দিয়ে তৈরি ৫টি রাজকীয় ডেজার্ট রেসিপি",
@@ -576,6 +607,7 @@ export const posts: Post[] = [
     date: "মে ০৯, ২০২৪",
     author: "শেফ ও রাঁধুনি",
     keywords: ["Mango dessert recipes", "ব্যানানা আমের ডেজার্ট", "সুস্বাদু খাবার"],
+    image: "/blog-images/img1.png",
   },
   {
     title: "ব্যানানা আম চাষে মাটির পিএইচ (pH) মানের গুরুত্ব",
@@ -595,6 +627,7 @@ export const posts: Post[] = [
     date: "মে ০৯, ২০২৪",
     author: "মাটি বিশেষজ্ঞ",
     keywords: ["Soil pH for mango", "মাটি পরীক্ষা পদ্ধতি", "উর্বরতা বৃদ্ধি"],
+    image: "/blog-images/img2.png",
   },
   {
     title: "ব্যানানা আম প্যাকিং এবং লজিস্টিক ম্যানেজমেন্ট গাইড",
@@ -616,6 +649,7 @@ export const posts: Post[] = [
     date: "মে ০৯, ২০২৪",
     author: "সাপ্লাই চেইন এক্সপার্ট",
     keywords: ["Mango packaging guide", "আম ডেলিভারি পদ্ধতি", "অনলাইন আম ব্যবসা"],
+    image: "/blog-images/img3.png",
   },
   {
     title: "ব্যানানা আমের পাতা দেখে রোগ চেনার সহজ ও কার্যকরী উপায়",
@@ -633,6 +667,7 @@ export const posts: Post[] = [
     date: "মে ০৯, ২০২৪",
     author: "উদ্ভিদ চিকিৎসক",
     keywords: ["Mango leaf disease", "পাতা দেখে রোগ শনাক্তকরণ", "আমের যত্ন"],
+    image: "/blog-images/img4.png",
   },
   {
     title: "ব্যানানা আম চাষে ফেরোমোন ফাঁদ ব্যবহারের অবিশ্বাস্য সুবিধা",
@@ -654,6 +689,7 @@ export const posts: Post[] = [
     date: "মে ০৯, ২০২৪",
     author: "পরিবেশবান্ধব কৃষক",
     keywords: ["Pheromone trap guide", "বিষমুক্ত আম চাষ", "আধুনিক কৃষি পদ্ধতি"],
+    image: "/blog-images/img5.png",
   },
   {
     title: "ব্যানানা আম চাষে সরকারি প্রণোদনা ও কৃষি ঋণ পাওয়ার উপায়",
@@ -674,6 +710,7 @@ export const posts: Post[] = [
     date: "মে ০৯, ২০২৪",
     author: "কৃষি অর্থনীতিবিদ",
     keywords: ["Agriculture loan Bangladesh", "সরকারি কৃষি প্রণোদনা", "আম চাষে সাহায্য"],
+    image: "/blog-images/img6.png",
   },
   {
     title: "ব্যানানা আম উৎসব ও রাজশাহীর আম মেলার ঐতিহ্যবাহী ইতিহাস",
@@ -692,6 +729,7 @@ export const posts: Post[] = [
     date: "মে ০৯, ২০২৪",
     author: "সাংস্কৃতিক কর্মী",
     keywords: ["Rajshahi mango festival", "আম মেলার ইতিহাস", "ব্যানানা আমের ঐতিহ্য"],
+    image: "/blog-images/img7.png",
   },
   {
     title: "ব্যানানা আম কেন বাচ্চাদের জন্য সেরা এবং নিরাপদ পুষ্টিকর খাবার?",
@@ -715,5 +753,6 @@ export const posts: Post[] = [
     date: "মে ০৯, ২০২৪",
     author: "শিশু বিশেষজ্ঞ",
     keywords: ["Mango for kids nutrition", "শিশুদের পুষ্টিকর খাবার", "নিরাপদ ফল"],
+    image: "/blog-images/img8.png",
   },
 ];

@@ -98,7 +98,7 @@ export default async function BlogPost({ params }: Props) {
             <article className="lg:w-2/3 bg-white p-8 md:p-12 rounded-[3rem] shadow-2xl border border-gray-100">
               <div className="relative aspect-video rounded-3xl overflow-hidden mb-12 shadow-2xl">
                 <Image 
-                  src="/banana-mango.png" 
+                  src={post.image} 
                   alt={post.title} 
                   fill 
                   className="object-cover"
@@ -175,7 +175,7 @@ export default async function BlogPost({ params }: Props) {
                       className="flex gap-4 group"
                     >
                       <div className="w-20 h-20 bg-gray-200 rounded-2xl overflow-hidden flex-shrink-0 relative">
-                        <Image src="/banana-mango.png" alt={p.title} fill className="object-cover group-hover:scale-110 transition-transform" />
+                        <Image src={p.image} alt={p.title} fill className="object-cover group-hover:scale-110 transition-transform" />
                       </div>
                       <div>
                         <h5 className="font-bold text-dark group-hover:text-primary transition-colors line-clamp-2 leading-snug">
