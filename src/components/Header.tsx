@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { ShoppingCart, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
@@ -9,6 +10,9 @@ import Image from "next/image";
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const isHomePage = pathname === "/";
+  const shouldShowBg = isScrolled || !isHomePage;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,7 +34,7 @@ const Header = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled ? "bg-white/80 backdrop-blur-xl py-3 shadow-2xl border-b border-gray-100" : "bg-transparent py-6"
+        shouldShowBg ? "bg-white/80 backdrop-blur-xl py-3 shadow-2xl border-b border-gray-100" : "bg-transparent py-6"
       }`}
     >
       <div className="container-fluid mx-auto px-4 md:px-12 flex items-center justify-between">
@@ -42,12 +46,12 @@ const Header = () => {
             className="flex flex-col leading-none"
           >
             <div className="flex items-center text-2xl md:text-3xl font-black">
-              <span className={isScrolled ? "text-slate-900" : "text-white drop-shadow-xl"}>
+              <span className={shouldShowBg ? "text-slate-900" : "text-white drop-shadow-xl"}>
                 Banana
               </span>
               <motion.span 
                 animate={{ 
-                  color: isScrolled ? ["#16a34a", "#ca8a04", "#16a34a"] : ["#4ade80", "#facc15", "#4ade80"],
+                  color: shouldShowBg ? ["#16a34a", "#ca8a04", "#16a34a"] : ["#4ade80", "#facc15", "#4ade80"],
                 }}
                 transition={{ 
                   duration: 4, 
@@ -70,7 +74,7 @@ const Header = () => {
               key={link.name}
               href={link.href}
               className={`text-sm font-black transition-all hover:text-primary relative group/link ${
-                isScrolled ? "text-slate-700" : "text-white drop-shadow-md"
+                shouldShowBg ? "text-slate-700" : "text-white drop-shadow-md"
               }`}
             >
               {link.name}
