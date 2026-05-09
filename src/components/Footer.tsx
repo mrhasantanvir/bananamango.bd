@@ -146,42 +146,23 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Live and Total Visitor Counters */}
-        <div className="bg-white border border-gray-100 rounded-2xl p-4 md:p-6 mb-12 shadow-sm flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 max-w-4xl mx-auto">
-          {/* Live Visitor */}
-          <div className="flex items-center gap-3">
-            <div className="relative flex items-center justify-center w-10 h-10 bg-red-50 rounded-full border border-red-100">
-              <span className="absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-20 animate-ping"></span>
-              <Activity size={18} className="text-red-500 relative z-10" />
-            </div>
-            <div>
-              <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-0.5">বর্তমানে অনলাইনে আছেন</p>
-              <div className="text-xl font-black text-dark flex items-baseline gap-1">
-                {liveVisitors} <span className="text-[10px] font-bold text-gray-400">জন</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Divider */}
-          <div className="hidden md:block w-px h-10 bg-gray-100"></div>
-          <div className="md:hidden w-full h-px bg-gray-100"></div>
-
-          {/* Total Visitor */}
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-primary/10 rounded-full border border-primary/20 flex items-center justify-center">
-              <Users size={18} className="text-primary" />
-            </div>
-            <div>
-              <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-0.5">সর্বমোট ভিজিটর</p>
-              <div className="text-xl font-black text-dark flex items-baseline gap-1">
-                {totalVisitors.toLocaleString('en-US')} <span className="text-[10px] font-bold text-gray-400">জন</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
         <div className="pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-6 text-gray-400 text-[10px] font-black tracking-widest uppercase">
           <p>© 2026 BananaMango.bd | All Rights Reserved</p>
+
+          <div className="flex flex-wrap items-center justify-center gap-6 md:gap-10">
+            <div className="flex items-center gap-2 bg-gray-50 px-3 py-1.5 rounded-full border border-gray-100">
+              <div className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+              </div>
+              <span className="text-gray-500">অনলাইনে: <span className="text-dark">{liveVisitors}</span></span>
+            </div>
+            <div className="flex items-center gap-2 bg-gray-50 px-3 py-1.5 rounded-full border border-gray-100">
+              <Users size={12} className="text-primary" />
+              <span className="text-gray-500">মোট ভিজিটর: <span className="text-dark">{totalVisitors.toLocaleString()}</span></span>
+            </div>
+          </div>
+
           <div className="flex items-center gap-4">
             <span className="flex items-center gap-2">
               Powered by 
