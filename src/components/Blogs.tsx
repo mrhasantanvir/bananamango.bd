@@ -3,11 +3,12 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight, Calendar, User } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { posts } from "@/data/posts";
 
 const Blogs = () => {
-  // Show all posts in reverse order (prioritizing the most recent)
-  const displayPosts = [...posts].reverse();
+  // Show the latest 6 posts in reverse order
+  const displayPosts = [...posts].reverse().slice(0, 6);
 
   return (
     <section id="blogs" className="py-32 bg-gray-50 relative overflow-hidden">
@@ -21,7 +22,7 @@ const Blogs = () => {
               আম বিষয়ক <span className="text-gradient">সবশেষ তথ্য ও টিপস</span>
             </h3>
           </div>
-          <Link href="#blogs" className="group flex items-center gap-3 bg-white px-8 py-4 rounded-2xl shadow-xl hover:bg-primary transition-all font-black text-dark active:scale-95">
+          <Link href="/blog" className="group flex items-center gap-3 bg-white px-8 py-4 rounded-2xl shadow-xl hover:bg-primary transition-all font-black text-dark active:scale-95">
             সবগুলো পড়ুন
             <ArrowUpRight size={18} className="group-hover:translate-x-2 transition-transform" />
           </Link>
@@ -38,7 +39,17 @@ const Blogs = () => {
               className="group bg-white rounded-[2.5rem] overflow-hidden shadow-xl hover:shadow-[0_40px_80px_-20px_rgba(251,191,36,0.3)] border border-gray-100 transition-all duration-500 transform hover:-translate-y-3 flex flex-col h-full relative"
             >
               {/* Top Accent Line */}
-              <div className="absolute top-0 left-0 w-0 h-1.5 bg-primary group-hover:w-full transition-all duration-700" />
+              <div className="absolute top-0 left-0 w-0 h-1.5 bg-primary group-hover:w-full transition-all duration-700 z-20" />
+              
+              <div className="relative h-64 overflow-hidden">
+                <Image 
+                  src={post.image} 
+                  alt={post.title} 
+                  fill 
+                  className="object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-dark/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              </div>
               
               <div className="p-10 flex-grow flex flex-col">
                 <div className="flex flex-wrap gap-2 mb-8">
