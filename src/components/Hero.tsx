@@ -47,7 +47,7 @@ const Hero = () => {
               </span>
             </div>
             
-            <h1 className="text-5xl md:text-8xl lg:text-9xl font-black text-white leading-[1.2] md:leading-[1.1] mb-10 tracking-tighter">
+            <h1 className="text-5xl md:text-8xl lg:text-9xl font-black text-white leading-[1.2] md:leading-[1.1] mb-10">
               <motion.span 
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}

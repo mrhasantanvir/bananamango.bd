@@ -38,7 +38,7 @@ const About = () => {
             className="lg:w-1/2"
           >
             <h2 className="text-sm font-black text-secondary uppercase tracking-[0.4em] mb-6">পরিচিতি ও ইতিহাস</h2>
-            <h3 className="text-4xl md:text-7xl font-black mb-10 leading-[1.1] tracking-tighter">
+            <h3 className="text-4xl md:text-7xl font-black mb-10 leading-[1.1]">
               ব্যানানা আমের <br />
               <span className="text-gradient">আভিজাত্য ও উৎস</span>
             </h3>

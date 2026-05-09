@@ -15,7 +15,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center mb-6 group">
-              <div className="text-2xl font-black tracking-tighter flex items-center">
+              <div className="text-2xl font-black flex items-center">
                 <span className="text-dark">Banana</span>
                 <span className="text-primary ml-1">Mango</span>
                 <span className="text-gray-400">.bd</span>

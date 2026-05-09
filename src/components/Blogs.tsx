@@ -17,7 +17,7 @@ const Blogs = () => {
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
           <div className="max-w-2xl">
             <h2 className="text-sm font-black text-secondary uppercase tracking-[0.4em] mb-4">নলেজ সেন্টার</h2>
-            <h3 className="text-4xl md:text-6xl font-black leading-tight tracking-tighter">
+            <h3 className="text-4xl md:text-6xl font-black leading-tight">
               আম বিষয়ক <span className="text-gradient">সবশেষ তথ্য ও টিপস</span>
             </h3>
           </div>
@@ -49,7 +49,7 @@ const Blogs = () => {
                   ))}
                 </div>
                 
-                <h4 className="text-2xl font-black mb-6 group-hover:text-primary transition-colors line-clamp-2 tracking-tighter leading-tight">
+                <h4 className="text-2xl font-black mb-6 group-hover:text-primary transition-colors line-clamp-2 leading-tight">
                   <Link href={`/blog/${post.slug}`}>{post.title}</Link>
                 </h4>
                 

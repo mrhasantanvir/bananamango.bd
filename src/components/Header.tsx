@@ -40,7 +40,7 @@ const Header = () => {
             whileHover={{ scale: 1.05 }}
             className="flex flex-col leading-none"
           >
-            <div className="flex items-center text-2xl md:text-3xl font-black tracking-tighter">
+            <div className="flex items-center text-2xl md:text-3xl font-black">
               <span className={isScrolled ? "text-slate-900" : "text-white drop-shadow-xl"}>
                 Banana
               </span>
